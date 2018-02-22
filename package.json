@@ -1,0 +1,26 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "Basic Amazon-like storefront using node.js and MySQL",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angkressin/bamazon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angkressin/bamazon/issues"
+  },
+  "homepage": "https://github.com/angkressin/bamazon#readme",
+  "dependencies": {
+    "cli-color": "^1.2.0",
+    "console.table": "^0.10.0",
+    "inquirer": "^5.1.0",
+    "mysql": "^2.15.0",
+  }
+}
