@@ -2,7 +2,7 @@
 Basic Amazon-like storefront using node.js and MySQL
 
 ## Description
-Bamazon is a Node.js and MySQL storefront application using CLI. This application allows the customer to purchase items in the stock and update the items in the MySQL database. 
+Bamazon is a Node.js and MySQL storefront application using CLI. This application allows customers to purchase items listed and will directly update the MySQL database. 
 
 ## Getting Started
 You will need:
