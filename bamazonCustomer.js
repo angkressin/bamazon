@@ -98,7 +98,7 @@ function updateStock(answer) {
     if (err) throw err;
     var result = res[0];
     if (answer.quantity > result.stock_quantity) {
-      console.log(color.red.italic("Sorry insufficient quantity in stock. Please try another item \n"));
+      console.log(color.red.italic("Sorry, insufficient quantity in stock. Please try another item \n"));
     printStock();
     } else {
       console.log(color.magenta.bold("====================================================== \n"))
