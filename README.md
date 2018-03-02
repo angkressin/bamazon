@@ -19,8 +19,10 @@ You will need:
 * Import the stock.csv file into Sequel Pro or SQL Workbench to insert the data. Be sure to ignore the item_id field so it can dynamically create ids. 
 * Run the bamazonCustomer.js or bamazonManager.js file in node
 * You will be prompted with questions specific for the user profile
-  * [Watch the video demonstration for customer view >>](https://drive.google.com/file/d/1jYQDZSG_bc1pju9cr07J4fD-230Wb7_0/view)
-  * [Watch the video demonstration for manager view >>](https://drive.google.com/open?id=1iI5zQQUq2KpHjUiOPoT5OpxF6sQMdpCl)
+  * Demonstration for customer view
+  ![bamazon customer view](https://github.com/angkressin/bamazon/raw/master/assets/bamazonCustomer_demo.gif)
+  * Demonstration for manager view 
+  ![bamazon manager view](https://github.com/angkressin/bamazon/blob/master/assets/bamazonManager_demo.gif)
   
 ## Authors
 Angela Kressin
