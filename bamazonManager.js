@@ -105,16 +105,17 @@ function promptAndUpdate() {
           }
           return 'Please enter numbers only';
         }
-      }]).then(function(answer) {
+      }
+    ]).then(function(answer) {
       connection.query("SELECT product_name FROM products WHERE item_id = ?", [answer.id], function(err, res) {
         if (err) throw err;
         console.log("\n");
         if (answer.amount > 1) {
-          console.log(color.magenta.bold("You have successfully added " + answer.amount +  " items to " + res[0].product_name));
+          console.log(color.magenta.bold("You have successfully added " + answer.amount + " items to " + res[0].product_name));
         } else if (answer.amount < 1) {
           console.log(color.red.bold("Looks like you have not added anything to " + res[0].product_name));
         } else {
-          console.log(color.magenta.bold("You have successfully added " + answer.amount +  " item to " + res[0].product_name));
+          console.log(color.magenta.bold("You have successfully added " + answer.amount + " item to " + res[0].product_name));
         }
         updateCount(answer);
       })
@@ -148,21 +149,21 @@ function addProducts() {
         message: "Please enter the product name that you would like to add \n",
       },
       {
-          name: "department",
-          type: "input",
-          message: "Please enter the department to which this product belongs \n",
-        },
-        {
-          name: "price",
-          type: "input",
-          message: "Please enter the price for each item \n",
-          validate: function validateNumber(value) {
-            if (!isNaN(parseFloat(value)) && isFinite(value)) {
-              return true;
-            }
-            return 'Please enter numbers only';
+        name: "department",
+        type: "input",
+        message: "Please enter the department to which this product belongs \n",
+      },
+      {
+        name: "price",
+        type: "input",
+        message: "Please enter the price for each item \n",
+        validate: function validateNumber(value) {
+          if (!isNaN(parseFloat(value)) && isFinite(value)) {
+            return true;
           }
-          },
+          return 'Please enter numbers only';
+        }
+      },
       {
         name: "quantity",
         type: "input",
@@ -173,12 +174,18 @@ function addProducts() {
           }
           return 'Please enter numbers only';
         }
-      }]).then(function(answer) {
-        var itemToInsert = {product_name: answer.product, department_name: answer.department, price: answer.price, stock_quantity: answer.quantity}
+      }
+    ]).then(function(answer) {
+      var itemToInsert = {
+        product_name: answer.product,
+        department_name: answer.department,
+        price: answer.price,
+        stock_quantity: answer.quantity
+      }
       connection.query("INSERT INTO products SET ?", itemToInsert, function(err, res) {
         if (err) throw err;
         console.log("\n");
-        console.log(color.magenta.bold("You have successfully added " + answer.quantity + " counts of " + answer.product +  " to the stock."));
+        console.log(color.magenta.bold("You have successfully added " + answer.quantity + " counts of " + answer.product + " to the stock."));
         printUpdatedStock();
       })
     })
