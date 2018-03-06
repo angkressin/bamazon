@@ -24,5 +24,5 @@ You will need:
   * Demonstration for manager view 
   ![bamazon manager view](https://github.com/angkressin/bamazon/blob/master/assets/bamazonManager_demo.gif)
   
-## Authors
+## Author
 Angela Kressin
